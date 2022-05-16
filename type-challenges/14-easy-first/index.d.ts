@@ -1,0 +1,1 @@
+type First<T> = T extends [infer First, ...infer Rest] ? First : never
