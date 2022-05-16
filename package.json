@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "typescript": "^4.6.4",
+    "@type-challenges/utils": "^0.1.1"
+  },
+  "name": "typescript-gym",
+  "version": "1.0.0",
+  "description": "typescript ts gym challenges",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "ts",
+    "typescript"
+  ],
+  "author": "Benjmain Chiu",
+  "license": "ISC"
+}
