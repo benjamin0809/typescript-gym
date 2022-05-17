@@ -1,7 +1,6 @@
 import { Equal, Expect } from "@type-challenges/utils"
 
-type Result1 = Includes<['Kars', 'Esidisi', 'Wamuu', 'Santana'], 'Dio'> // expected to be `false`
-type Result2 = Includes<['Kars', 'Esidisi', 'Wamuu', 'Santana'], 'Santana'> // expected to be `true`
+type Result = Unshift<[1, 2], 0> // [0, 1, 2]
 
-type test = [Expect<Equal<Result1, false>>, Expect<Equal<Result2, true>>]
+type test = [Expect<Result extends [0, 1, 2] ? true: false>]
 

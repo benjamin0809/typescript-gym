@@ -1,1 +1,1 @@
-type Push = any // TODO
+type Push<T extends any[], U> = [...T, U]

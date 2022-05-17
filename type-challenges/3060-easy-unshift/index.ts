@@ -1,1 +1,1 @@
-type Unshift = any // TODO
+type Unshift<T extends any[], U> = [U, ...T]
