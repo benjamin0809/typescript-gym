@@ -1,0 +1,1 @@
+type Transform<A> = A extends Promise<infer T> ? T: never

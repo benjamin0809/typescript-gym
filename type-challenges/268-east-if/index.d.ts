@@ -1,0 +1,1 @@
+type If<T,K,U> = T extends true ? K : U

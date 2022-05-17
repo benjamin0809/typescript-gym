@@ -1,10 +1,12 @@
 import { Equal, Expect } from "@type-challenges/utils"
 
-type tesla = 'tesla'| 'model 3'| 'model X'|'model Y'
-type spaceX = ['FALCON 9', 'FALCON HEAVY', 'DRAGON', 'STARSHIP', 'HUMAN SPACEFLIGHT']
+type X = Promise<string>
+type Y = Promise<{ field: number }>
 
-type teslaLength = Exclude<tesla, 'tesla'>  // expected 4
-type spaceXLength = Length<spaceX> // expected 5
+type ResultX = Transform<X>; // ResultX type equals string
+type ResultY = Transform<Y>; // ResultY type equals { field: number }
 
-type test = [Expect<Equal<teslaLength, 4>> ,
-Expect<Equal<spaceXLength, 5>>]
+
+type test = [Expect<Equal<ResultX, string>> ,
+Expect<Equal<ResultY, { field: number }>>]
+
