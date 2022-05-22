@@ -1,5 +1,9 @@
 import { Equal, Expect } from "@type-challenges/utils"
 
+type MyPick<T, U extends keyof T> = {
+    [P in U]: T[P]
+}
+
 interface Todo {
     title: string
     description: string

@@ -1,6 +1,9 @@
+type MyExclude<T, U> = T extends U ? never: T
+
 type MyReadonly2<T, U extends keyof T = keyof T> = {
     readonly [P in U]: T[P]
 } & { [P in MyExclude<keyof T,U>]: T[P] };
+
 interface Todo {
   title: string;
   description: string;

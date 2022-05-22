@@ -1,7 +1,8 @@
 import { Equal, Expect } from "@type-challenges/utils";
 
-// TODO
-type PromiseAll<T extends any[]> = T extends [...infer U, infer P] ? U : never;
+//TODO
+// 你的答案
+declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{[P in keyof T] : T[P] extends Promise<infer R>? R : T[P]}>
 
 const promise1 = Promise.resolve(3);
 const promise2 = 42;
