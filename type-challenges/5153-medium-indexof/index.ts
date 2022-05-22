@@ -1,11 +1,14 @@
 import { ExpectFalse, Expect, Equal } from "@type-challenges/utils";
 
-type IndexOf<T extends any[], U, Ans extends any[] = []> = T extends [infer F, ...infer R]
-  ? F extends U
-    ? Ans['length']
-    : IndexOf<R, U, [...Ans, any]>
-  : -1;
-
+type IndexOf<
+  T extends any[],
+  U extends any,
+  Index extends any[] = []
+> = Index["length"] extends T["length"]
+  ? -1
+  : Equal<T[Index["length"]], U> extends true
+  ? Index["length"]
+  : IndexOf<T, U, [...Index, any]>;
 
 type Res = IndexOf<[1, 2], 1>; // expected to be 0
 type Res1 = IndexOf<[1, 2, 4, 1, 5], 6>; // expected to be -1
