@@ -1,13 +1,12 @@
 import { Equal, Expect } from "@type-challenges/utils";
 
-// TODO
-type LookUp<U extends object, T extends string, P = U> = U extends U
-    ? [U] extends [P]
-        ? T extends U[keyof U]
-            ? U
-            : never
-        : never
-    : never;
+type LookUp<T, U extends string, P = T> = T extends T ? 
+    [T] extends [P] ?
+        U extends T[keyof P] ?
+        T
+        :never
+    : never
+: never
 
 interface Cat {
     type: 'cat'
