@@ -1,13 +1,21 @@
 {
   "dependencies": {
-    "typescript": "^4.6.4",
-    "@type-challenges/utils": "^0.1.1"
+    "@type-challenges/utils": "^0.1.1",
+    "typescript": "^4.6.4"
   },
   "name": "typescript-gym",
   "version": "1.0.0",
   "description": "typescript ts gym challenges",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "prettier": "^2.6.2"
+  },
   "scripts": {
     "test": "test"
   },

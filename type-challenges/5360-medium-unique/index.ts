@@ -1,16 +1,16 @@
 import { ExpectFalse, Expect, Equal } from "@type-challenges/utils";
 
 type IndexOf<
-  T extends any[],
-  U extends any,
-  Index extends any[] = []
+  T extends unknown[],
+  U,
+  Index extends unknown[] = []
 > = Index["length"] extends T["length"]
   ? -1
   : Equal<T[Index["length"]], U> extends true
   ? Index["length"]
-  : IndexOf<T, U, [...Index, any]>;
+  : IndexOf<T, U, [...Index, unknown]>;
 
-type Unique<T extends any[], Result extends any[] = []> = T extends [
+type Unique<T extends unknown[], Result extends unknown[] = []> = T extends [
   infer F,
   ...infer R
 ]
