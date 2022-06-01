@@ -1,6 +1,6 @@
 import { Equal, Expect } from "@type-challenges/utils";
 
-type MyReturnType<T extends (...args: any[]) => any> = T extends (
+type MyReturnType<T extends (...args: any[]) => unknown> = T extends (
   ...args: any[]
 ) => infer U
   ? U

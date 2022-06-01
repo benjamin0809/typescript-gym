@@ -1,5 +1,6 @@
 import { Equal, Expect } from "@type-challenges/utils";
 
+// T tuple
 type MyExclude<T,U> = T extends U ? never: T
 type MyOmit<T, U extends keyof T> = {
     [P in MyExclude<keyof T, U>]: T[P]
